@@ -1,15 +1,30 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Header from '../../other/Header'
-import TaskListNumber from '../../other/TaskListNumber'
-import TaskList from '../TaskList/TaskList'
+import TaskListNumbers from '../../other/TaskListNumbers'
+import TaskList from '../TaskList/TaskList.jsx'
+import { AuthContext } from '../../context/AuthProvider'
 
-const EmployeeDashboard = ({data}) => {
+const EmployeeDashboard = ({ data, changeUser }) => {
+  const [userData, setUserData] = useContext(AuthContext)
+
+  useEffect(() => {
+    if (userData) {
+      const updatedEmployee = userData.find(emp => emp.id === data.id)
+      if (updatedEmployee) {
+        const updatedData = { role: "employee", data: updatedEmployee }
+        localStorage.setItem('loggedInUser', JSON.stringify(updatedData))
+      }
+    }
+  }, [userData, data.id])
+
+  const currentEmployeeData = userData?.find(emp => emp.id === data.id) || data
+
   return (
-    <div className='p-8 bg-[#1C1C1C] h-screen w-screen'>
-   <Header data = {data}/>
-   <TaskListNumber data = {data}/>
-   <TaskList data = {data}/>
-   </div>
+    <div className='min-h-screen bg-[#0a0a0a] p-6 md:p-10'>
+      <Header data={currentEmployeeData} changeUser={changeUser} />
+      <TaskListNumbers data={currentEmployeeData} />
+      <TaskList data={currentEmployeeData} />
+    </div>
   )
 }
 
