@@ -1,9 +1,9 @@
 EMS (Employee Management System)
 
-📚 Project Overview
+📚 Project Overview:
 EMS is a web-based Employee Management System designed to simplify the management of employee data. Built using React, this project leverages local storage to ensure data persistence and provides a smooth user experience.
 
-✨ Features
+✨ Features:
 Add Employees: Add new employee details including name, position, and more.
 Edit Employee Details: Update existing employee records with ease.
 Delete Employees: Remove employees when necessary.
@@ -13,6 +13,7 @@ Responsive Design: Fully responsive UI for desktop and mobile devices.
 Frontend: React
 Storage: Local Storage
 📸 Screenshots
+
 ![Dashboard Screenshot](screenshots/dashboard.png)  
 ![Add Employee Screenshot](screenshots/add-employee.png)  
 ![Edit Employee Screenshot](screenshots/edit-employee.png)  
