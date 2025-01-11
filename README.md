@@ -13,9 +13,9 @@ Responsive Design: Fully responsive UI for desktop and mobile devices.
 Frontend: React
 Storage: Local Storage
 📸 Screenshots
-![Dashboard Screenshot](screenshots/dashboard.png)  
-![Add Employee Screenshot](screenshots/add-employee.png)  
-![Edit Employee Screenshot](screenshots/edit-employee.png)  
+![loginPage Screenshot](screenshots/loginPage.png)  
+![adminDashoard Screenshot](screenshots/adminDashboard.png)  
+![employeeDashboard Screenshot](screenshots/employeeDashboard.png)  
 
 
 🚀 How to Run the Project Locally
