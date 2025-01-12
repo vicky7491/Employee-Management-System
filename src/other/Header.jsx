@@ -12,7 +12,7 @@ const Header = ({ data, changeUser }) => {
         <div className='flex items-end justify-between bg-[#1e1e1e] p-6 rounded-xl shadow-md shadow-black/10'>
             <div>
                 <h1 className='text-gray-400 font-medium'>Welcome back,</h1>
-                <span className='text-2xl font-bold text-gray-100'>{data?.firstName ? data.firstName : 'Admin'} 👋🏻</span>
+                <span className='text-2xl font-bold text-gray-100'>{data?.firstName ? data.firstName : 'Admin'} ❤️</span>
             </div>
             <button 
                 onClick={logOutUser} 
